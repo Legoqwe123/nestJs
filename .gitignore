@@ -1,0 +1,4 @@
+node_modules
+nginx
+yarn.lock
+yarn-error.log
