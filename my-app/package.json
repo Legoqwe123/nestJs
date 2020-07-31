@@ -25,14 +25,18 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "serve": "^11.3.2",
     "subscriptions-transport-ws": "^0.9.17",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:dev": "react-scripts start",
     "build": "react-scripts build",
+    "start": "serve -l 3000 -s build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "yarn run build",
+    "production:web": "yarn build && yarn start"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -2,7 +2,7 @@ import { ConnectionOptions } from "typeorm"
 
 const typeOrmConfig: ConnectionOptions = {
   type: "postgres",
-  host: "localhost",
+  host: process.env.HOST || "localhost",
   port: 5432,
   username: "chat",
   password: "chat",

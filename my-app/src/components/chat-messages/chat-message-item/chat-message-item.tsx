@@ -23,7 +23,7 @@ export const ChatMessageItem = ({
       justifyContent={role === "sender" ? "flex-end" : "flex-start"}
     >
       <Box display="inline-flex" className={classes.message}>
-        {messag}
+        {message}
       </Box>
     </Box>
   )
