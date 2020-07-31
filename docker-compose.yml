@@ -6,7 +6,7 @@ volumes:
 services:
   web: 
     build: ./my-app
-    command: yarn start
+    command: yarn production:web
     restart: unless-stopped
     ports:
       - "3000:3000"
@@ -14,7 +14,7 @@ services:
       - api
   api: 
     build: ./api
-    command: ['yarn' ,'production']
+    command: yarn production
     environment: 
       - HOST=db
     ports:
